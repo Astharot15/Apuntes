@@ -27,7 +27,7 @@ Para entender mejor el DOM-based XSS debemos entender dos conceptos:
 	3. append()
 Muchas de estas funciones no permiten el uso de la etiqueta <script></script> por lo que usaremos otras etiquetas.
 El ejemplo más utilizado es un onerror attack:
-// <img src="" onerror="alert()">
+"<img src="" onerror="alert()">"
 Esta etiqueta lo que hace es introducir una imagen inválida y a la hora de intentar cargarla, al dar error, llegará al atributo onerror ejecutando lo que haya.
 
 Descubrimiento de vulnerabilidades XSS:
